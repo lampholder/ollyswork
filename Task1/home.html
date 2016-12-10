@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
+	<script src="jquery-3.1.1.min.js"></script>
+	<script type=text/javascript src='js/slideshow.js'></script>
+
+<style>
+body  {
+    background-image: url("modBG.jpg");
+    background-repeat:no-repeat;
+	  background-size:cover;
+}  <script type=text/javascript src='js/myStyle.js'></script>
+</style>
+<body>
+</head>
+
+<body>
+<!--Navgation Bar -->
+<nav class ="navbar" role="navigation">
+<ul>
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="products.html">Products</a></li>
+  <li><a href="media.html">Media</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="stocks.html">Stocks</a></li>
+  <li><input type="button" id="fontPlusBtn" value="A+"/></li>
+  <li><input type="button" id="fontMinusBtn" value="A-"/></li>
+</ul>
+  <h1    href="Title">Atkinson's Warehouse</h1>
+</nav>	
+
+<br>
+<br>
+
+
+<div id="wrap">
+<!--Insert Jquery Banner here-->
+<div class="slideshow-container">
+  <div class="mySlides fade"> 
+    <div class="numbertext">1 / 3</div>
+    <img src="IMG_1000.jpg" style="width:100%"> 
+    <div class="text">BOGOF on Dresses</div>
+  </div>
+
+  <div class="mySlides fade" style="display:none;">
+    <div class="numbertext">2 / 3</div> 
+    <img src="picture4.jpg" style="width:100%">
+    <div class="text">Free shipping on orders over £50</div>
+  </div>
+
+  <div class="mySlides fade" style="display:none;">
+    <div class="numbertext">3 / 3</div>
+    <img src="IMG_3643.jpg" style="width:100%">
+    <div class="text">Up to 50% off Shoes</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+</div>
+<div class="audio">
+<audio src="basicmusic.wav" controls>
+<p>If you are reading this, it is because your browser does not support the audio element.</p>
+</audio>
+</div>
+
+<div id="textDiv">
+<p>  General text describing website </p>
+</div>
+
+</body>
+
+<footer><script src="js/fontSize.js"></script></footer>
+</html>

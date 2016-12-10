@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Media</title>
+	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
+	<script src="jquery-3.1.1.min.js"></script>
+
+<style>
+body  {
+    background-image: url("modBG.jpg");
+    background-repeat:no-repeat;
+	  background-size:cover;
+}
+</style>
+<body>
+</head>
+
+<body>
+<!--Navgation Bar -->
+<nav class ="navbar" role="navigation">
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="products.html">Products</a></li>
+  <li><a class="active" href="media.html">Media</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="stocks.html">Stocks</a></li>
+  <li><input type="button" id="fontPlusBtn" value="A+"/></li>
+  <li><input type="button" id="fontMinusBtn" value="A-"/></li>
+</ul>
+  <h1    href="Title">Atkinson's Warehouse</h1>
+</nav>	
+<br>
+<br>
+<!--Insert Video -->
+<div class="video">
+<video controls id="vid">
+<source src="ASOS.mp4" type="video/mp4"></video>
+<button id="play">Play</button><br>
+<button id="stop">Stop</button><br> 
+<button id="seek">Seek</button><br>
+<button id="mute">Mute</button><br>
+</div>
+</body>
+
+<footer>
+<script src='js/videocontrols.js'></script>
+<script src="js/fontSize.js"></script>
+</footer>
+  
+</html>
