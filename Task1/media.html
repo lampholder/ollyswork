@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 	<title>Media</title>
 	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
@@ -33,13 +34,16 @@ body  {
 <br>
 <!--Insert Video -->
 <div class="video">
-<video controls id="vid">
+<video id="vid">
 <source src="ASOS.mp4" type="video/mp4"></video>
 <button id="play">Play</button><br>
 <button id="stop">Stop</button><br> 
-<button id="seek">Seek</button><br>
-<button id="mute">Mute</button><br>
+<button type="button" onclick="enableMute()">Mute</button><br>
+<button type="button" onclick="enableUnmute()">UnMute</button><br>
 </div>
+
+<div id ="textDiv"> 
+<p>Welcome to the media page, use the buttons below to play the video to view upcoming designs coming soon</p></div>
 </body>
 
 <footer>
