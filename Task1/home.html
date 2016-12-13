@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
 	<script src="jquery-3.1.1.min.js"></script>
 	<script type=text/javascript src='js/slideshow.js'></script>
-
 <style>
 body  {
     background-image: url("modBG.jpg");
     background-repeat:no-repeat;
-	  background-size:cover;
-}  <script type=text/javascript src='js/myStyle.js'></script>
+    background-size:cover;
+}
 </style>
 <body>
 </head>
@@ -27,10 +27,10 @@ body  {
   <li><a href="stocks.html">Stocks</a></li>
   <li><input type="button" id="fontPlusBtn" value="A+"/></li>
   <li><input type="button" id="fontMinusBtn" value="A-"/></li>
-</ul>
-  <h1    href="Title">Atkinson's Warehouse</h1>
-</nav>	
-
+  <li><br><input type="button" id="colorChange" value="Change Colour"/></li>
+ </ul>
+<h1    href="Title">Atkinson's Warehouse</h1>
+</nav>  
 <br>
 <br>
 
@@ -75,10 +75,17 @@ body  {
 </div>
 
 <div id="textDiv">
-<p>  General text describing website </p>
+<p>  General text describing website lol </p>
 </div>
 
 </body>
 
-<footer><script src="js/fontSize.js"></script></footer>
+<footer>
+<script src="js/fontSize.js"></script>
+<script type="text/javascript">
+    $("#textDiv > *").css("font-size", function(i, value) {
+	return parseInt(window.localStorage.getItem('fontSize'));
+    });
+</script>
+</footer>
 </html>
