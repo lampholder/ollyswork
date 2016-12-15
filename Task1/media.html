@@ -2,15 +2,15 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-	<title>Media</title>
-	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
-	<script src="jquery-3.1.1.min.js"></script>
+  <title>Media</title>
+  <link rel="stylesheet" type="text/css" href="css/myStyle.css">
+  <script src="jquery-3.1.1.min.js"></script>
 
 <style>
 body  {
     background-image: url("modBG.jpg");
     background-repeat:no-repeat;
-	  background-size:cover;
+    background-size:cover;
 }
 </style>
 <body>
@@ -29,9 +29,10 @@ body  {
   <li><input type="button" id="fontMinusBtn" value="A-"/></li>
 </ul>
   <h1    href="Title">Atkinson's Warehouse</h1>
-</nav>	
-<br>
-<br>
+</nav>  
+<div id ="textDiv"> 
+<p>Welcome to the media page, use the buttons below to play the video to view upcoming designs coming soon</p></div>
+</body>
 <!--Insert Video -->
 <div class="video">
 <video id="vid">
@@ -42,13 +43,16 @@ body  {
 <button type="button" onclick="enableUnmute()">UnMute</button><br>
 </div>
 
-<div id ="textDiv"> 
-<p>Welcome to the media page, use the buttons below to play the video to view upcoming designs coming soon</p></div>
-</body>
+
 
 <footer>
 <script src='js/videocontrols.js'></script>
 <script src="js/fontSize.js"></script>
+<script type="text/javascript">
+    $("#textDiv > *").css("font-size", function(i, value) {
+  return parseInt(window.localStorage.getItem('fontSize'));
+    });
+</script>
 </footer>
   
 </html>

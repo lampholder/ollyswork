@@ -4,6 +4,12 @@ p {
 
 #textDiv {
     font-size: 15px;
+    color: white;
+}
+
+.livethumbnail{
+    max-width:50%;
+   max-height:50%;
 }
 
 #fontPlusBtn{
@@ -22,6 +28,10 @@ p {
       background-color: #000;
   }
 
+img.resize{
+   max-width:30%;
+   max-height:30%;
+}
 
 ul {
     list-style-type: none;

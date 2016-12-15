@@ -2,13 +2,13 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-	<title>Contact</title>
-	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
+  <title>Contact</title>
+  <link rel="stylesheet" type="text/css" href="css/myStyle.css">
 <style>
 body  {
     background-image: url("modBG.jpg");
     background-repeat:no-repeat;
-	background-size:cover;
+  background-size:cover;
 }
 </style>
 <body>
@@ -27,10 +27,11 @@ body  {
   <li><input type="button" id="fontMinusBtn" value="A-"/></li>
   </ul>
 <h1    href="Title">Atkinson's Warehouse</h1>
-</nav>	
+</nav>  
 
 
 <!-- Insert Form Here -->
+<div id="textDiv">
 <form id="my_form" onsubmit="submitForm(); return false;">
   <p><input id="firstName" placeholder="First Name" required></p>
   <p><input id="lastName" placeholder="Last Name" required></p>
@@ -40,11 +41,17 @@ body  {
   <p><input id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
 </form>
 </body>
+</div>
 
 <footer>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script src="js/formajaxcall.js"></script>
-	<script src="js/fontSize.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/formajaxcall.js"></script>
+  <script src="js/fontSize.js"></script>
+  <script type="text/javascript">
+    $("#textDiv > *").css("font-size", function(i, value) {
+  return parseInt(window.localStorage.getItem('fontSize'));
+    });
+</script>
 </footer>
 
 </html>

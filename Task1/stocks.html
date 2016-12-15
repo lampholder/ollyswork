@@ -2,14 +2,14 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-	<title>Stocks</title>
-	<link rel="stylesheet" type="text/css" href="css/myStyle.css"> 
+  <title>Stocks</title>
+  <link rel="stylesheet" type="text/css" href="css/myStyle.css"> 
   <script src="jquery-3.1.1.min.js"></script>
 <style>
 body  {
     background-image: url("modBG.jpg");
     background-repeat:no-repeat;
-	  background-size:cover;
+    background-size:cover;
 }
 </style>
 <body>
@@ -28,21 +28,27 @@ body  {
   <li><input type="button" id="fontMinusBtn" value="A-"/></li>
   </ul>
 <h1    href="Title">Atkinson's Warehouse</h1>
-</nav>	
+</nav>  
 
 <br>
 <br>
 <div id="textDiv">
-<p>  General text describing website </p>
-</div>
+<p>Below is a live feed of Sketchers stock pricing, our main distributer for shoes.</p>
+
 <!-- Insert Stock Data Here -->
 <div id="content">The current stock price for Sketchers (SKX) is: <span id="bid"></span></div>
+</div>
 
 </body>
 
 <footer>
 <script src="js/fontSize.js"></script>
 <script src="js/stockcall.js"></script>
+<script type="text/javascript">
+    $("#textDiv > *").css("font-size", function(i, value) {
+  return parseInt(window.localStorage.getItem('fontSize'));
+    });
+</script>
 
 </footer>
  
