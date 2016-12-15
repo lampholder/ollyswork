@@ -1,8 +1,9 @@
-    var gbpToEuroExchRate = 1.17;
     $("#showInEuro").click(function() { 
-        $("span.currency").each(function(index) { 
-            $(this).text($(this).attr("name") * gbpToEuroExchRate);
-        });
+	$.getJSON( "https://api.fixer.io/latest?base=GBP", function( data ) {
+		$("span.currency").each(function(index) { 
+		    $(this).html("&euro;" + $(this).attr("name") * data.rates.EUR);
+		});
+	});
     });
 
     var gbpToDollarExchRate = 1.26;
